@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ergocai" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="homebrew-21" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="app.freerouting.Freerouting" />
+    <module name="freerouting.main" />
+    <option name="PROGRAM_PARAMETERS" value="-de $USER_HOME$/Desktop/ergo_cai/freerouting.dsn -do $USER_HOME$/Desktop/ergo_cai/freerouting.ses -host KiCad " />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

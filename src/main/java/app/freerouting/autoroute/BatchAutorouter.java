@@ -134,6 +134,7 @@ public class BatchAutorouter extends NamedAlgorithm
    */
   public boolean runBatchLoop()
   {
+    FRLogger.info("Starting runBatchLoop in BatchAutorouter...");
     this.fireTaskStateChangedEvent(new TaskStateChangedEvent(this, TaskState.STARTED, 0, this.board.get_hash()));
 
     boolean still_unrouted_items = true;
@@ -238,6 +239,7 @@ public class BatchAutorouter extends NamedAlgorithm
   {
     try
     {
+      FRLogger.info("Starting autoroute_pass...");
       Collection<Item> autoroute_item_list = new LinkedList<>();
       Set<Item> handled_items = new TreeSet<>();
       Iterator<UndoableObjects.UndoableObjectNode> it = board.item_list.start_read_object();
@@ -373,6 +375,7 @@ public class BatchAutorouter extends NamedAlgorithm
   {
     try
     {
+      FRLogger.info("Starting autoroute_item...");
       boolean contains_plane = false;
 
       // Get the net

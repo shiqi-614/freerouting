@@ -203,6 +203,8 @@ public class MazeSearchAlgo
    */
   public Result find_connection()
   {
+    FRLogger.info("Starting find_connection...");
+
     while (occupy_next_element())
     {
     }
@@ -236,6 +238,7 @@ public class MazeSearchAlgo
       Iterator<MazeListElement> it = maze_expansion_list.iterator();
       list_element = it.next();
       int curr_section_no = list_element.section_no_of_door;
+      FRLogger.info("current item" + list_element.sorting_value);
       curr_door_section = list_element.door.get_maze_search_element(curr_section_no);
       it.remove();
       if (!curr_door_section.is_occupied)
@@ -933,6 +936,7 @@ public class MazeSearchAlgo
    */
   private boolean init(Set<Item> p_start_items, Set<Item> p_destination_items)
   {
+    FRLogger.info("init MazeSearchAlgo");
     reduce_trace_shapes_at_tie_pins(p_start_items, this.ctrl.net_no, this.search_tree);
     reduce_trace_shapes_at_tie_pins(p_destination_items, this.ctrl.net_no, this.search_tree);
     // process the destination items
@@ -972,6 +976,7 @@ public class MazeSearchAlgo
     Collection<IncompleteFreeSpaceExpansionRoom> start_rooms = new LinkedList<>();
     for (Item curr_item : p_start_items)
     {
+      FRLogger.info("start item name " + curr_item.get_component_no() + " " + curr_item.component_name());
       if (this.autoroute_engine.is_stop_requested())
       {
         return false;

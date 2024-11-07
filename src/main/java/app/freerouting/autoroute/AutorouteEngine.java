@@ -123,6 +123,7 @@ public class AutorouteEngine
    */
   public AutorouteResult autoroute_connection(Set<Item> p_start_set, Set<Item> p_dest_set, AutorouteControl p_ctrl, SortedSet<Item> p_ripped_item_list)
   {
+    FRLogger.info("Starting autoroute_connection...");
     MazeSearchAlgo maze_search_algo;
     try
     {

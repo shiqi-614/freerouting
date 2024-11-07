@@ -50,6 +50,10 @@ public abstract class Item implements Drawable, SearchTreeObject, ObjectInfoPane
    */
   private int component_no;
   /**
+   *
+   */
+  protected String component_name;
+  /**
    * False, if the item is deleted or not inserted into the board
    */
   private boolean on_the_board = false;

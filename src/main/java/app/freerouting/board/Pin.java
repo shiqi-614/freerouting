@@ -42,6 +42,7 @@ public class Pin extends DrillItem implements Serializable
     super(null, p_net_no_arr, p_clearance_type, p_id_no, p_component_no, p_fixed_state, p_board);
 
     this.pin_no = p_pin_no;
+    this.component_name = p_board.components.get(p_component_no).name;
   }
 
   /**
